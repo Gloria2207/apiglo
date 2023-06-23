@@ -1,0 +1,131 @@
+/* Style de base */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 16px;
+	font-family: Arial, sans-serif;
+}
+
+body {
+	background-color: #F4F7FC;
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.logo {
+	flex: 1 1 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #1B4F72;
+	padding: 2rem;
+}
+
+.logo img {
+	max-width: 100%;
+	max-height: 100%;
+    border-radius: 25%;
+}
+
+.form {
+	flex: 1 1 400px;
+	background-color: #FFF;
+	padding: 2rem;
+	border-radius: 0.5rem;
+	box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+	font-size: 2rem;
+	text-align: center;
+	margin-bottom: 2rem;
+	color: #1B4F72;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+label {
+	margin-bottom: 0.5rem;
+	color: #1B4F72;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+	padding: 0.5rem;
+	border: 1px solid #CCC;
+	border-radius: 0.25rem;
+	margin-bottom: 1rem;
+}
+
+button[type="submit"] {
+	background-color: #1B4F72;
+	color: #FFF;
+	padding: 0.5rem 1rem;
+	border: none;
+	border-radius: 0.25rem;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: background-color 0.2s ease-in-out;
+	align-self: center;
+}
+
+button[type="submit"]:hover {
+	background-color: #0E2C46;
+}
+
+/* Media queries pour adapter le formulaire */
+
+@media screen and (min-width: 768px) {
+	.container {
+		flex-direction: row;
+	}
+
+	.logo {
+		height: 100vh;
+	}
+
+	.form {
+		margin-left: 2rem;
+	}
+}
+
+/* Animer lebouton de soumission */
+
+button[type="submit"] {
+	position: relative;
+	overflow: hidden;
+}
+
+button[type="submit"]::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 0;
+	height: 0;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+	transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover::before {
+	width: 200%;
+	height: 200%;
+}

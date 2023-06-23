@@ -1,0 +1,277 @@
+/* .............................NAV BAR............................ */
+
+      
+/* Style pour announcement ............... */
+.announcement-banner {
+  position: inherit;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #0077be;
+  z-index: 9999;
+  overflow: hidden;
+  }
+  
+  .announcement-content {
+  display: flex;
+  animation: move-left 40s linear infinite;
+  }
+  
+  .announcement-text {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 10px;
+  }
+  
+  @keyframes move-left {
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+  }
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    display: flex;
+    align-items:flex-end;
+    height: 80px;
+    padding: 0 20px;
+}
+
+.navbar-logo {
+    margin-right: 30px;
+}
+
+.navbar-logo img {
+    height: 60px;
+    vertical-align: middle;
+}
+
+.profile-logo {
+    margin-right: 30px;
+}
+
+.profile-logo img {
+    height: 60px;
+    vertical-align: middle;
+    
+}
+.navbar a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.active {
+    background-color: #1B4F72;
+    color: white;
+}
+
+
+
+
+    /*style pour button (autre services)  */
+    .color-changing-button {
+      background-color: #0077be;
+      color: #ffffff;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+      animation: color-change 8s ease-in-out infinite;
+    }
+    
+    .color-changing-button:hover {
+      background-color: #004c7f;
+    }
+    
+    @keyframes color-change {
+      0% {
+        background-color: #0077be;
+      }
+      25% {
+        background-color: #00ff00;
+      }
+      50% {
+        background-color: #ff0000;
+      }
+      75% {
+        background-color: #ffff00;
+      }
+      100% {
+        background-color: #0077be;
+      }
+    }
+/* -------------------ArTICLEs------------------------- */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+#mai {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.house {
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  width: 300px;
+  display: block;
+  
+
+   
+}
+
+
+.house img {
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.house .details {
+  padding: 10px;
+}
+
+.house h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.house p {
+  margin: 5px 0;
+}
+
+.house button {
+  background-color: #1B4F72;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+  margin-top: 10px;
+  cursor: pointer}
+
+input[type="text"], button {
+  font-size: 1rem;
+  padding: 10px;
+  border: none;
+  margin: 0 10px;
+}
+
+button {
+  background-color: #1B4F72;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+
+
+
+ /* ......................FOOTER............................. */
+ footer {
+    left: 0;
+    bottom:auto;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+  }
+  
+  .footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .contact-us a,
+  .home {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .contact-us a:hover,
+  .home:hover {
+    color: #f1c40f;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .footer-wrapper {
+      flex-direction: column;
+    }
+  }
+
+.b {
+background-color: black;
+height: 1%;
+}
+
+/* ----------------------------product modal----------- */
+.product-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 9999;
+}
+
+.product-modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  max-width: 800px;
+  width: 80%;
+  height: 80%;
+  overflow: auto;
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
